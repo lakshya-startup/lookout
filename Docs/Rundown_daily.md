@@ -11,3 +11,5 @@ Foundation & Clarity
 - Day was mostly theory and setup but the foundation is solid
 4 hrs : 30 mins
 </p>
+
+# Rundown Day 2
