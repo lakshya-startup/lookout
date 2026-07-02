@@ -47,3 +47,13 @@ Auth is enabled in Firebase — Email/Password is live. But it hasn't been teste
 
 # What's left to finish Day 3:
 Wire up Auth in FlutterFlow properly → test signup with the my email → see myself appear in Firebase Auth !!
+
+# Rundown Day 4:
+Restarted Auth in Firebase.
+Hit run.
+Created my own account.
+Checked Firebase — my email and UID are sitting 
+in the database on Sydney servers.
+Look Out has its first user. It's me.
+The app is alive.
+<b>So the Login and sign up is ready For now </b>
