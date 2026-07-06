@@ -57,3 +57,12 @@ in the database on Sydney servers.
 Look Out has its first user. It's me.
 The app is alive.
 <b>So the Login and sign up is ready For now </b>
+
+# Rundown Day 5:
+<p> Scaffolding, gave alot of thought into how to tackle this Everest the best possible way.</p><br>
+<P>Because at first I was about to build the beginner guide first all the backend stuff too but I could not quite visualize how <br>the backend and frontend was going to shape so i though of just focusing on making UI and leaving it as a placeholder and working on it after all of it is completed I will then start working on backend properly I mean this is how I am going to tackle it</P>
+
+# Rundown Day 6:
+<p>Build succesfully the visa dynamic island it is very MVP atm haha, But I do believe that it's better than the prior plan I had in mind <br> so Visa Countodwn Feature initial Phase UI Done <br>
+Also I have started working on Feature which deadass new, because This new feature is called the TV and it will stay at the main homepage so I thought It should be the one to be made first.
+</p>
