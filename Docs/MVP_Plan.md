@@ -92,4 +92,5 @@ The visa countdown UI transitions through three dynamic operational stages:
 *   **Stage 3 (100% Floating Interface):** Tapping the pill during either Stage 1 or Stage 2 triggers a custom Bottom Sheet. It slides up from the bottom, anchoring perfectly to leave exactly 15% open space at the top and 5% open space at the bottom.
 
 ### 3. The TV 
+The Tv where the promotional item sit like a 
 

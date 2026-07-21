@@ -66,3 +66,33 @@ The app is alive.
 <p>Build succesfully the visa dynamic island it is very MVP atm haha, But I do believe that it's better than the prior plan I had in mind <br> so Visa Countodwn Feature initial Phase UI Done <br>
 Also I have started working on Feature which deadass new, because This new feature is called the TV and it will stay at the main homepage so I thought It should be the one to be made first.
 </p>
+
+# Rundown Day 7: New Apporach --> Documentaion
+<P> 
+
+## 1: What & Why
+
+What is it? The TV Feature is a place where promotional items sit, advertising like one of those big billboards. 
+
+Why build it? All these advertisements help users find something special they are lowkey looking for or just finding the right fit. Say you want a hoodie or you're heading out for groceries using our app—mind you, this isn't the main feature, it's just something you stumble on while engaging with our service. You look and see "Hey, in Pak'nSave there is a clearance and $5 sale on most things!" So it saves you from missing out big time. These local sales don't typically appear in YouTube ads or Instagram reels. It keeps you included on what's going on in your community. Plus, so many things can generate from that, even conversation starters. If you stay at home and only go into the office for one day, you actually have something to talk about like "Hey, did you guys go to that Pak'nSave sale?" 
+
+* Local Value: Catches real deals and community hype that big social media ads miss.
+* Conversation Starter: Gives people real-world topics to connect on.
+* Ambient Discovery: Something you stumble on naturally while using the app.
+
+## 2: Obstacle & Resolution
+
+Used PageView at first, which was weird, but because I am new to FlutterFlow I thought that would be the right fit. But it's in the name itself—PageView—so I dropped that thought, researched a bit, and found the Carousel widget. It works like an online billboard where ads stay in rotation, giving about 5-6 seconds for one ad to stay before looping to the next one with smooth animation. It also lets you add more pages for extra ads down the line.
+
+* The Fix: Switched from PageView to the Carousel widget for smooth looping and timed rotations.
+* The Structure: Created the TV inside the Stack and Column, holding a Container with the Carousel inside.
+
+## 3: Next Action
+
+Complete the bottom navigation bar just like any other app. If you swipe right, there's a page for that, and at the bottom there's the name or picture of that page. We're building about five pages for this. 
+
+The main page will be the one holding the TV and Visa Countdown Feature. At the bottom, the nav bar stays stagnant—meaning if you swipe right, the page changes, but the nav stays put. The nav item's name or icon just scales up a bit with a slight margin shift if it's the current page we're in, giving it that pop effect.
+
+* Build out all 5 pages linked to the bottom nav.
+* Keep the nav bar static while background pages swipe underneath.
+* Add dynamic scaling and margin shifts so the active page name/icon pops.
