@@ -96,3 +96,35 @@ The main page will be the one holding the TV and Visa Countdown Feature. At the 
 * Build out all 5 pages linked to the bottom nav.
 * Keep the nav bar static while background pages swipe underneath.
 * Add dynamic scaling and margin shifts so the active page name/icon pops.
+
+# Rundown Day 8: Layered Z-Stack Navigation System
+
+## 1. What & Why
+
+What is it? It's our custom horizontal navigation system using a layered Z-Index Stack layout in FlutterFlow. It lets users swipe naturally between 5 main app pages while keeping the bottom navigation bar permanently pinned at the bottom of the screen.
+
+Why build it this way? Default page navigation can feel super basic or jarring when whole screens just pop in and out. By making a full-screen PageView the base layer of a Stack and pinning our custom bottom bar on top, the background pages slide seamlessly like a game canvas while the controls stay steady under your thumbs. On Index 2 (our main Homepage), we dropped in our hard-earned features from yesterday—the TV Billboard and the Visa Countdown card. Setting it up like this keeps the UI feeling ultra-fluid, modern, and sticky, giving the app a clean interactive vibe while keeping all 5 core sections easily reachable.
+
+* Seamless Flow: Background pages swipe smoothly while the main navigation stays fixed right where you need it.
+* True Layering: Puts the core interactive features like the TV Billboard and Visa Countdown right on the Homepage (Index 2) without messing up navigation.
+* Clean Architecture: Keeps screen transitions fluid without relying on heavy default navigation bars that reload the whole view.
+
+## 2: Obstacle & Resolution
+
+The main challenge was figuring out how to keep the bottom navigation bar static while swiping through pages. If you put the navigation bar inside the PageView itself, it swipes away with the page, which completely ruins the native bottom-bar feel. 
+
+To fix this, I made the PageView Layer 1 (the background) inside a master Stack with 5 page indexes. Then, I placed the bottom navigation layout on Layer 2 (the foreground) outside the PageView, pinning it directly at coordinates Y:1, X:0. Inside that container, I built a Row set to space elements evenly, holding 5 custom Columns that act as our tap targets. Instead of using standard buttons, each Column holds a custom Container with an On Tap action hooked up to handle state changes and jump the PageView smoothly.
+
+* The Mistake: Realizing that putting nav controls inside the PageView causes them to swipe away with the screen content.
+* The Structure: Separated the layout into a 2-layer Stack—Layer 1 holds the 5-index PageView, while Layer 2 holds the fixed navigation overlay at Y:1, X:0.
+* Custom Controls: Built 5 evenly spaced Columns with custom actionable Containers instead of default FlutterFlow buttons for complete design control.
+
+## 3: Next Action
+
+Now that the master Z-Stack structural layout is built and the Homepage content is sitting clean on Index 2, we need to complete the two-way logic synchronization across all 5 pages.
+
+We need to make sure tapping any of the 5 custom navigation containers updates the `currentTab` App State variable and immediately fires a `Control PageView -> Jump To` action to snap to the correct index. Once that two-way sync is locked in, we'll implement our dynamic tab sizing (`IF currentTab == index THEN height 60 / margin 12 ELSE height 44 / margin 0`) so the active tab visually pops up when you're on that page.
+
+* Wire up On Tap actions on all 5 custom nav containers (Set `currentTab` App State + `Jump To` PageView Index).
+* Verify swiping the PageView manually updates the `currentTab` state to match the bottom bar.
+* Apply dynamic active-state styling (height and margin shifts) so the current tab pops out smoothly.
